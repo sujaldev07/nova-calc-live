@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NOVA CALC | Smart Calculator</title>
+    <meta name="theme-color" content="#EDEFF2" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nova-live.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <a href="#home" class="logo">NOVA<span>CALC</span></a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home">
+      <p class="eyebrow">SMART CALCULATION EXPERIENCE</p>
+
+      <h1>Calculate Smarter.</h1>
+      <h2>Understand Every Step.</h2>
+
+      <p>
+        A modern calculator built to demonstrate how a website works behind the
+        scenes. The full college version uses a C backend.
+      </p>
+
+      <button
+        onclick="
+          document
+            .getElementById('calculator')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Open the calculator
+      </button>
+    </main>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">WHY NOVA CALC?</p>
+        <h2>Simple to Use. Built to Perform.</h2>
+        <p>Everything you need for quick and reliable calculations.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>⚡ Fast Calculations</h3>
+          <p>Perform arithmetic operations quickly with a clean interface.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>⌨️ Easy Input</h3>
+          <p>Type or tap a full expression with brackets and operators.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>🛡️ Error Handling</h3>
+          <p>Handle invalid calculations, including division by zero.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">BEHIND THE SCREEN</p>
+        <h2>How Does It Work?</h2>
+        <p>Three parts work together to calculate and display the result.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <span>01</span>
+          <h3>Frontend</h3>
+          <p>
+            HTML creates the structure, CSS styles the interface, and JavaScript
+            handles user interaction.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span>02</span>
+          <h3>C Backend (Full Version)</h3>
+          <p>
+            In the full college version, a C program processes the calculation.
+            This live demo runs the same logic in JavaScript.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span>03</span>
+          <h3>Browser (Live Demo)</h3>
+          <p>
+            Everything runs inside your browser, so no server is needed.
+            History is saved in your browser.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <p class="eyebrow">ABOUT THIS PROJECT</p>
+
+      <h2>More Than Just a Calculator.</h2>
+
+      <p>
+        NOVA CALC is a student project that demonstrates how a web interface
+        communicates with a backend written in C. It combines frontend
+        development, arithmetic logic, and client-server communication.
+      </p>
+
+      <p class="project-note">
+        Live demo: calculations run in JavaScript. Full version (C backend + Python server) is on GitHub.
+      </p>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR CALCULATION SPACE</p>
+        <h2>Meet Your Calculator.</h2>
+        <p>Simple inputs. Clear results. Smarter calculations.</p>
+      </div>
+
+      <div class="calculator">
+        <div class="calculator-top">
+          <span class="calculator-logo">NOVA<span>CALC</span></span>
+          <span class="status"> <span class="status-dot"></span> READY </span>
+        </div>
+
+        <div class="display">
+          <p class="display-label">DISPLAY</p>
+
+          <textarea
+            id="expression"
+            placeholder="Enter expression"
+            rows="1"
+            autocomplete="off"
+            aria-label="Calculator expression"
+          ></textarea>
+
+          <div id="result" aria-live="polite">0</div>
+        </div>
+
+        <div class="result-row">
+          <button id="copy-result" type="button" title="Copy result">
+            Copy
+          </button>
+        </div>
+
+        <div class="calculator-buttons">
+          <button class="utility" data-action="clear">AC</button>
+          <button class="utility" data-action="delete">DEL</button>
+          <button class="operator" data-value="%">%</button>
+          <button class="operator" data-value="/">÷</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button class="operator" data-value="*">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button class="operator" data-value="-">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button class="operator" data-value="+">+</button>
+
+          <button class="utility" data-value="(">(</button>
+          <button class="utility" data-value=")">)</button>
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button class="equals" data-action="calculate">=</button>
+        </div>
+
+        <p class="calculator-footer">
+          Live demo: calculated in your browser with JavaScript
+        </p>
+      </div>
+    </section>
+
+    <!-- Calculation History -->
+    <section class="history-section">
+      <div class="history-header">
+        <button id="toggle-history" type="button" aria-expanded="false">
+          Calculation History ▼
+        </button>
+
+        <button id="clear-history" type="button">Clear History</button>
+      </div>
+
+      <ul id="history-list">
+        <li>No calculations yet</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>NOVA CALC | BCA Project | C Language &amp; Web Technology</p>
+    </footer>
+
+    <script src="nova-live.js"></script>
+  </body>
+</html>
